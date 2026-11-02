@@ -238,7 +238,7 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_music_hide_comments_community_guidelines_title">Masquer les règles de la communauté</string>
   <string name="morphe_music_hide_comments_context_title">Masquer le message de contexte</string>
   <string name="morphe_music_hide_comments_emoji_button_title">Masquer le bouton \'Émoji\'</string>
-  <string name="morphe_music_hide_comments_gif_button_title">Masquer le bouton GIF</string>
+  <string name="morphe_music_hide_comments_gif_button_title">Masquer le bouton \'GIF\'</string>
   <string name="morphe_music_hide_comments_gifs_and_images_title">Masquer les GIF et les images</string>
   <string name="morphe_music_hide_comments_gifs_and_images_summary">Masque les GIF et les images joints aux commentaires et aux réponses</string>
   <string name="morphe_music_hide_comments_info_button_title">Masquer le bouton \'Info\'</string>

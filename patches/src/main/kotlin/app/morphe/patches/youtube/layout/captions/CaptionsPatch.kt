@@ -69,6 +69,7 @@ val captionsPatch = bytecodePatch(
         captionViewportPatch,
         captionsInPipPatch,
         captionsAfterSeekPatch,
+        captionStylePatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -89,6 +90,18 @@ val captionsPatch = bytecodePatch(
             "morphe_captions_in_pip",
         )
 
+        val style = take(
+            "morphe_caption_style_preview",
+            "morphe_caption_style_enabled",
+            "morphe_caption_font_family",
+            "morphe_caption_text_color",
+            "morphe_caption_background_color",
+            "morphe_caption_window_color",
+            "morphe_caption_edge_type",
+            "morphe_caption_edge_color",
+            "morphe_caption_ignore_creator_style",
+        )
+
         PreferenceScreen.PLAYER.addPreferences(
             PreferenceScreenPreference(
                 key = "morphe_captions_screen",
@@ -103,6 +116,11 @@ val captionsPatch = bytecodePatch(
                         key = "morphe_captions_presentation",
                         sorting = PreferenceScreenPreference.Sorting.UNSORTED,
                         preferences = presentation
+                    ),
+                    PreferenceCategory(
+                        key = "morphe_captions_style",
+                        sorting = PreferenceScreenPreference.Sorting.UNSORTED,
+                        preferences = style
                     ),
                     PreferenceScreenPreference(
                         key = "morphe_captions_advanced",

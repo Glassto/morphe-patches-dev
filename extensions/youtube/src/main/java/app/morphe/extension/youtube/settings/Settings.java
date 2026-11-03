@@ -38,6 +38,8 @@ import app.morphe.extension.youtube.patches.AddToQueuePatch.MorpheQueueAvailabil
 import app.morphe.extension.youtube.patches.AddToQueuePatch.NotLocalQueueAvailability;
 import app.morphe.extension.youtube.patches.AddToQueuePatch.QueueType;
 import app.morphe.extension.youtube.patches.AutoCaptionsPatch.AutoCaptionsStyle;
+import app.morphe.extension.youtube.patches.CaptionStylePatch.CaptionEdgeType;
+import app.morphe.extension.youtube.patches.CaptionStylePatch.CaptionFontFamily;
 import app.morphe.extension.youtube.patches.BackgroundPlaybackPatch.AutoPauseOnLockMode;
 import app.morphe.extension.youtube.patches.ChangeFormFactorPatch.FormFactor;
 import app.morphe.extension.youtube.patches.ChangeHeaderPatch.HeaderLogo;
@@ -426,6 +428,14 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting SECONDARY_CAPTION_LANGUAGE = new StringSetting("morphe_secondary_caption_language", "off", true,
             () -> Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q);
     public static final IntegerSetting CAPTION_SCALE = new IntegerSetting("morphe_caption_scale", 100, true);
+    public static final BooleanSetting CAPTION_STYLE_ENABLED = new BooleanSetting("morphe_caption_style_enabled", FALSE, true);
+    public static final EnumSetting<CaptionFontFamily> CAPTION_FONT_FAMILY = new EnumSetting<>("morphe_caption_font_family", CaptionFontFamily.DEFAULT, true, parent(CAPTION_STYLE_ENABLED));
+    public static final StringSetting CAPTION_TEXT_COLOR = new StringSetting("morphe_caption_text_color", "#FFFFFFFF", true, parent(CAPTION_STYLE_ENABLED));
+    public static final StringSetting CAPTION_BACKGROUND_COLOR = new StringSetting("morphe_caption_background_color", "#BF000000", true, parent(CAPTION_STYLE_ENABLED));
+    public static final StringSetting CAPTION_WINDOW_COLOR = new StringSetting("morphe_caption_window_color", "#00000000", true, parent(CAPTION_STYLE_ENABLED));
+    public static final EnumSetting<CaptionEdgeType> CAPTION_EDGE_TYPE = new EnumSetting<>("morphe_caption_edge_type", CaptionEdgeType.NONE, true, parent(CAPTION_STYLE_ENABLED));
+    public static final StringSetting CAPTION_EDGE_COLOR = new StringSetting("morphe_caption_edge_color", "#FF000000", true, parent(CAPTION_STYLE_ENABLED));
+    public static final BooleanSetting CAPTION_IGNORE_CREATOR_STYLE = new BooleanSetting("morphe_caption_ignore_creator_style", FALSE);
 
     // Miniplayer
     public static final BooleanSetting MINIPLAYER_DISABLE_RESUMING = new BooleanSetting("morphe_miniplayer_disable_resuming", FALSE, true);

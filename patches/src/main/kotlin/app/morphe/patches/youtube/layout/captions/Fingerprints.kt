@@ -962,3 +962,84 @@ internal object CaptionFontSizeFingerprint : Fingerprint(
         literal(13.0f)
     )
 )
+
+internal const val CAPTION_STYLE_CLASS = $$"Landroid/view/accessibility/CaptioningManager$CaptionStyle;"
+
+/**
+ * Finds methods that read an int field of the system caption style, such as `foregroundColor`.
+ */
+internal class CaptionStyleFieldReadFingerprint(fieldName: String) : Fingerprint(
+    filters = listOf(
+        fieldAccess(
+            opcode = Opcode.IGET,
+            definingClass = CAPTION_STYLE_CLASS,
+            name = fieldName
+        )
+    )
+)
+
+/**
+ * Finds methods that call a method of the system caption style or of the captioning manager.
+ */
+internal class CaptionStyleMethodCallFingerprint(
+    definingClass: String,
+    methodName: String,
+    returnType: String
+) : Fingerprint(
+    filters = listOf(
+        methodCall(
+            definingClass = definingClass,
+            name = methodName,
+            parameters = listOf(),
+            returnType = returnType
+        )
+    )
+)
+
+/**
+ * YouTube caption style object (obfuscated class). Fields: background color, window color,
+ * edge color, edge type, text color and font id. It is created from the system caption style,
+ * or from six ints when the system style is not used.
+ * This is the constructor that takes the system caption style.
+ */
+internal object CaptionStyleFromSystemConstructorFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf($$"Landroid/view/accessibility/CaptioningManager$CaptionStyle;", "L"),
+    filters = listOf(
+        fieldAccess(
+            opcode = Opcode.IGET,
+            definingClass = CAPTION_STYLE_CLASS,
+            name = "foregroundColor"
+        )
+    )
+)
+
+/**
+ * Finds methods that read an int field of a class, such as the YouTube caption style.
+ */
+internal class ClassIntFieldReadFingerprint(definingClass: String, fieldName: String) : Fingerprint(
+    filters = listOf(
+        fieldAccess(
+            opcode = Opcode.IGET,
+            definingClass = definingClass,
+            name = fieldName
+        )
+    )
+)
+
+/**
+ * Method that picks the typeface of a caption style. Uses the system typeface for some styles.
+ */
+internal object CaptionStyleTypefaceFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
+    returnType = "Landroid/graphics/Typeface;",
+    parameters = listOf("Landroid/content/Context;", "L"),
+    filters = listOf(
+        methodCall(
+            definingClass = CAPTION_STYLE_CLASS,
+            name = "getTypeface",
+            parameters = listOf(),
+            returnType = "Landroid/graphics/Typeface;"
+        )
+    )
+)

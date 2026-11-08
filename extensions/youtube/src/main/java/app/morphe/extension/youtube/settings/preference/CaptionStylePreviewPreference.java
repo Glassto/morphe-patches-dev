@@ -157,13 +157,13 @@ public final class CaptionStylePreviewPreference extends Preference {
         @Override
         protected void onDraw(Canvas canvas) {
             try {
-                draw(canvas);
+                drawPreview(canvas);
             } catch (Exception ex) {
                 Logger.printException(() -> "Preview draw failure", ex);
             }
         }
 
-        private void draw(Canvas canvas) {
+        private void drawPreview(Canvas canvas) {
             final boolean custom = CaptionStylePatch.isCustomStyleEnabled();
             final float density = getResources().getDisplayMetrics().density;
 

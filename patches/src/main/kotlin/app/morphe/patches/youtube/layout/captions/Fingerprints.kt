@@ -1040,7 +1040,7 @@ internal object CaptionFontSizeFingerprint : Fingerprint(
     )
 )
 
-internal const val CAPTION_STYLE_CLASS = $$"Landroid/view/accessibility/CaptioningManager$CaptionStyle;"
+internal const val SYSTEM_CAPTION_STYLE_CLASS = $$"Landroid/view/accessibility/CaptioningManager$CaptionStyle;"
 
 /**
  * Finds methods that read an int field of the system caption style, such as `foregroundColor`.
@@ -1049,7 +1049,7 @@ internal class CaptionStyleFieldReadFingerprint(fieldName: String) : Fingerprint
     filters = listOf(
         fieldAccess(
             opcode = Opcode.IGET,
-            definingClass = CAPTION_STYLE_CLASS,
+            definingClass = SYSTEM_CAPTION_STYLE_CLASS,
             name = fieldName
         )
     )
@@ -1085,7 +1085,7 @@ internal object CaptionStyleFromSystemConstructorFingerprint : Fingerprint(
     filters = listOf(
         fieldAccess(
             opcode = Opcode.IGET,
-            definingClass = CAPTION_STYLE_CLASS,
+            definingClass = SYSTEM_CAPTION_STYLE_CLASS,
             name = "foregroundColor"
         )
     )

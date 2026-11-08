@@ -398,7 +398,7 @@ internal val captionStylePatch = bytecodePatch(
         ).forEach { (field, hook) ->
             hookedFields += hookFieldReads(
                 methodsOf(CaptionStyleFieldReadFingerprint(field)),
-                CAPTION_STYLE_CLASS,
+                SYSTEM_CAPTION_STYLE_CLASS,
                 field,
                 hook
             )
@@ -482,8 +482,8 @@ internal val captionStylePatch = bytecodePatch(
             "hasEdgeType",
         ).forEach { name ->
             hookMethodResults(
-                methodsOf(CaptionStyleMethodCallFingerprint(CAPTION_STYLE_CLASS, name, "Z")),
-                CAPTION_STYLE_CLASS,
+                methodsOf(CaptionStyleMethodCallFingerprint(SYSTEM_CAPTION_STYLE_CLASS, name, "Z")),
+                SYSTEM_CAPTION_STYLE_CLASS,
                 name,
                 "Z",
                 Opcode.MOVE_RESULT,
@@ -492,8 +492,8 @@ internal val captionStylePatch = bytecodePatch(
         }
 
         hookMethodResults(
-            methodsOf(CaptionStyleMethodCallFingerprint(CAPTION_STYLE_CLASS, "getTypeface", "Landroid/graphics/Typeface;")),
-            CAPTION_STYLE_CLASS,
+            methodsOf(CaptionStyleMethodCallFingerprint(SYSTEM_CAPTION_STYLE_CLASS, "getTypeface", "Landroid/graphics/Typeface;")),
+            SYSTEM_CAPTION_STYLE_CLASS,
             "getTypeface",
             "Landroid/graphics/Typeface;",
             Opcode.MOVE_RESULT_OBJECT,

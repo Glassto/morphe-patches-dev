@@ -70,6 +70,7 @@ val captionsPatch = patch(
         captionViewportPatch,
         captionsInPipPatch,
         captionsAfterSeekPatch,
+        captionStylePatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -90,6 +91,36 @@ val captionsPatch = patch(
             "morphe_captions_in_pip",
         )
 
+        val style = take(
+            "morphe_caption_style_preview",
+            "morphe_caption_style_enabled",
+            "morphe_caption_style_preset",
+            "morphe_caption_ignore_creator_style",
+        )
+
+        val styleText = take(
+            "morphe_caption_font_family",
+            "morphe_caption_font_weight",
+            "morphe_caption_font_italic",
+            "morphe_caption_letter_spacing",
+            "morphe_caption_text_color",
+            "morphe_caption_edge_type",
+            "morphe_caption_edge_color",
+            "morphe_caption_edge_strength",
+        )
+
+        val styleBackground = take(
+            "morphe_caption_background_style",
+            "morphe_caption_background_color",
+            "morphe_caption_window_color",
+            "morphe_caption_corner_radius",
+            "morphe_caption_background_padding",
+            "morphe_caption_border_width",
+            "morphe_caption_border_color",
+            "morphe_caption_shadow_size",
+            "morphe_caption_shadow_color",
+        )
+
         PreferenceScreen.PLAYER.addPreferences(
             PreferenceScreenPreference(
                 key = "morphe_captions_screen",
@@ -104,6 +135,21 @@ val captionsPatch = patch(
                         key = "morphe_captions_presentation",
                         sorting = PreferenceScreenPreference.Sorting.UNSORTED,
                         preferences = presentation
+                    ),
+                    PreferenceCategory(
+                        key = "morphe_captions_style",
+                        sorting = PreferenceScreenPreference.Sorting.UNSORTED,
+                        preferences = style
+                    ),
+                    PreferenceCategory(
+                        key = "morphe_captions_style_text",
+                        sorting = PreferenceScreenPreference.Sorting.UNSORTED,
+                        preferences = styleText
+                    ),
+                    PreferenceCategory(
+                        key = "morphe_captions_style_background",
+                        sorting = PreferenceScreenPreference.Sorting.UNSORTED,
+                        preferences = styleBackground
                     ),
                     PreferenceScreenPreference(
                         key = "morphe_captions_advanced",

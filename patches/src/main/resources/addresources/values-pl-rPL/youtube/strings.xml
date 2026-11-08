@@ -319,25 +319,18 @@ Zmiany obejmują:
   <string name="morphe_hide_keyword_content_search_title">Ukryj wyniki wyszukiwania</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Ukryj filmy na stronie subskrypcji</string>
   <string name="morphe_hide_keyword_content_phrases_title">Słowa do ukrycia</string>
-  <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
-         This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Wprowadź słowa i frazy do ukrycia, każda w nowej linii
+  <string name="morphe_hide_keyword_content_phrases_summary">"Wpisz słowa kluczowe i frazy do ukrycia, oddzielone nowymi liniami
 
-Słowem może być dowolny tekst wyświetlany w tytułach filmów lub nazwach kanałów
-
-Słowa z wielkimi literami w środku muszą pasować dokładnie (np. iPhone, TikTok, InPost)"</string>
-  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / Subskrypcje / Wyniki wyszukiwania / Komentarze są filtrowane, aby ukryć treści, które zawierają słowa z filtra
+Słowa kluczowe mogą być dowolnym tekstem wyświetlanym w tytułach filmów lub nazwach kanałów"</string>
+  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / Subskrypcje / Wyszukiwanie / Komentarze są filtrowane, aby ukryć treści, które pasują do fraz słów kluczowych
 
 Ograniczenia:
-• Filmy Short nie mogą być ukryte po nazwie kanału
-• Niektóre elementy interfejsu mogą nie być ukryte
-• Wyszukiwanie słowa z filtru może nie pokazywać żadnych wyników"</string>
+• Niektóre Shorts nie mogą być ukryte po nazwie kanału
+• Niektóre elementy interfejsu mogą nie zostać ukryte"</string>
   <string name="morphe_hide_keyword_content_about_whole_words_title">Dopasuj całe wyrazy</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
   <string name="morphe_hide_keyword_content_about_whole_words_summary">Otoczenie słowa/frazy cudzysłowem zapobiegnie częściowym dopasowaniom w tytułach filmów i nazwach kanałów&lt;br&gt;&lt;br&gt;Na przykład,&lt;br&gt;&lt;b&gt;\"kot\"&lt;/b&gt; ukryje film: &lt;b&gt;Jak zachowuje się kot?&lt;/b&gt;&lt;br&gt;lecz nie ukryje: &lt;b&gt;Wielki bojkot znanej marki&lt;/b&gt;</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_hide_keyword_toast_invalid_common">Nie można użyć słowa: %s</string>
-  <string name="morphe_hide_keyword_toast_invalid_common_whole_word_required">Dodaj cudzysłowy, aby użyć słowa: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_conflicting">Słowo zawiera sprzeczne deklaracje: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_length">Słowo jest za krótkie i wymaga użycia cudzysłowu: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Słowo ukryje wszystkie filmy: %s</string>
@@ -500,6 +493,13 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_post_translate_started">Tłumaczenie…</string>
   <string name="morphe_post_translate_failed">Nie udało się przetłumaczyć posta</string>
   <string name="morphe_post_translate_same_language">Post jest już w docelowym języku tłumaczenia</string>
+  <!-- interaction.onthego.onTheGoPatch -->
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_on_the_go_title">Włącz Morphe w wersji mobilnej</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_on_the_go_summary">Panel wysuwny odtwarzacza „w ruchu” otwiera niestandardowe sterowanie odtwarzaczem Morphe</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_on_the_go_panel_title">W ruchu</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Dodaj opcję \"Zapytaj\" do menu</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Dodaje opcję podsumowania filmu do menu na liście</string>
@@ -794,7 +794,6 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_tap_to_seek_title">Włącz przewijanie dotknięciem</string>
   <string name="morphe_tap_to_seek_summary">Dotknij dowolnego miejsca na pasku postępu, aby przeskoczyć do wybranego momentu, zamiast przeciągać suwak</string>
   <!-- interaction.seekbar.customSeekbarThumbPatch -->
-  <string name="morphe_custom_seekbar_thumb_category_title">Własny suwak paska postępu</string>
   <string name="morphe_custom_seekbar_thumb_title">Włącz własny suwak paska postępu</string>
   <string name="morphe_custom_seekbar_thumb_summary">Zastąp suwak paska postępu własnym obrazem lub animowanym GIF-em</string>
   <string name="morphe_custom_seekbar_thumb_file_title">Obraz suwaka</string>
@@ -1773,6 +1772,9 @@ Odtwarzanie filmu z użyciem AV1 może powodować zacinanie się lub gubienie kl
   <string name="morphe_niconico_comments_screen_title">Komentarze w stylu Niconico</string>
   <string name="morphe_niconico_comments_screen_summary">Pokaż czat na żywo oraz powtórkę czatu jako komentarze przewijające się przez ekran filmu</string>
   <string name="morphe_niconico_comments_summary">Wyświetla przycisk w nakładce odtwarzacza. Dotknij, aby pokazać lub ukryć komentarze. Przytrzymaj, aby otworzyć szybkie ustawienia</string>
+  <string name="morphe_niconico_comments_appearance_title">Wygląd</string>
+  <string name="morphe_niconico_comments_portrait_category_title">W orientacji pionowej</string>
+  <string name="morphe_niconico_comments_video_types_title">Typy wideo</string>
   <string name="morphe_niconico_comments_font_size_title">Rozmiar czcionki komentarzy</string>
   <string name="morphe_niconico_comments_font_size_summary">Rozmiar tekstu komentarzy (12-40 sp)</string>
   <string name="morphe_niconico_comments_opacity_title">Krycie komentarzy</string>
@@ -1781,6 +1783,16 @@ Odtwarzanie filmu z użyciem AV1 może powodować zacinanie się lub gubienie kl
   <string name="morphe_niconico_comments_travel_duration_summary">Liczba sekund potrzebna komentarzom na pokonanie ekranu. Mniejsze wartości oznaczają szybszy ruch</string>
   <string name="morphe_niconico_comments_display_area_title">Obszar wyświetlania</string>
   <string name="morphe_niconico_comments_display_area_summary">Określa, jaką część odtwarzacza (licząc od góry) zajmują komentarze. Niższe wartości pozostawiają dolną część filmu odsłoniętą</string>
+  <string name="morphe_niconico_comments_portrait_title">Pokaż w trybie portretowym</string>
+  <string name="morphe_niconico_comments_portrait_summary">Wyświetlaj komentarze, gdy ekran jest w trybie portretowym. Wyłącz, aby wyświetlać je tylko w trybie poziomym</string>
+  <string name="morphe_niconico_comments_separate_portrait_title">Osobne ustawienia dla trybu portretowego</string>
+  <string name="morphe_niconico_comments_separate_portrait_summary">Użyj innego rozmiaru czcionki, czasu trwania oraz obszaru wyświetlania w trybie portretowym. Po włączeniu zostaną przyjęte aktualne wartości</string>
+  <string name="morphe_niconico_comments_portrait_font_size_title">Rozmiar czcionki komentarzy w trybie portretowym</string>
+  <string name="morphe_niconico_comments_portrait_font_size_summary">Rozmiar tekstu komentarzy w trybie portretowym (12-40 sp)</string>
+  <string name="morphe_niconico_comments_portrait_travel_duration_title">Czas przelotu w trybie portretowym</string>
+  <string name="morphe_niconico_comments_portrait_travel_duration_summary">Ile sekund zajmuje komentarzom przejście przez ekran w trybie portretowym</string>
+  <string name="morphe_niconico_comments_portrait_display_area_title">Obszar wyświetlania w trybie portretowym</string>
+  <string name="morphe_niconico_comments_portrait_display_area_summary">Jaka część odtwarzacza, licząc od góry, jest wykorzystywana przez komentarze w trybie portretowym</string>
   <string name="morphe_niconico_comments_hide_crowded_title">Ukrywaj nakładające się komentarze</string>
   <string name="morphe_niconico_comments_hide_crowded_summary">Gdy obszar wyświetlania jest pełny, nowe komentarze są ukrywane, aby nie nakładały się na inne komentarze</string>
   <string name="morphe_niconico_comments_max_length_title">Maksymalna długość komentarza</string>

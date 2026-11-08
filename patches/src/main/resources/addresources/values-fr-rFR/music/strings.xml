@@ -739,7 +739,7 @@ Cookies nécessaires : SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_dynamic_background_title">Arrière-plan dynamique</string>
   <string name="morphe_music_lyrics_dynamic_background_summary">Afficher un arrière-plan flou créé à partir de la pochette de l\'album derrière les paroles</string>
   <string name="morphe_music_lyrics_dynamic_background_animated_title">Animer l\'arrière-plan dynamique</string>
-  <string name="morphe_music_lyrics_dynamic_background_animated_summary">Déplacer l\'arrière-plan pendant la lecture, et le faire vibrer au rythme de la musique si YouTube Music dispose de l\'autorisation d\'accès au microphone. Désactivez cette option pour conserver un arrière-plan fixe qui consomme moins de batterie</string>
+  <string name="morphe_music_lyrics_dynamic_background_animated_summary">Déplacer l\'arrière-plan pendant la lecture, et le faire vibrer au rythme de la musique si YouTube Music dispose de l\'autorisation d\'accès au microphone. Désactivez pour conserver un arrière-plan fixe qui consomme moins de batterie</string>
   <string name="morphe_music_lyrics_mediasession_title">Afficher les paroles MediaSession sur l\'écran de verrouillage</string>
   <string name="morphe_music_lyrics_mediasession_summary">Affiche la ligne en cours sur l\'écran de verrouillage, Android Auto et Bluetooth</string>
   <string name="morphe_music_lyrics_miniplayer_title">Afficher les paroles dans le mini-lecteur</string>
